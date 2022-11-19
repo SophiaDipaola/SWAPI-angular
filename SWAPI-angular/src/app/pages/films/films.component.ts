@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SwapiService } from 'src/app/services/swapi.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-films',
@@ -9,6 +10,7 @@ import { SwapiService } from 'src/app/services/swapi.service';
 export class FilmsComponent implements OnInit {
   films: any
 
+
   constructor(private swapiService : SwapiService) { }
 
   ngOnInit(): void {
@@ -16,4 +18,7 @@ export class FilmsComponent implements OnInit {
       this.films = data
     })
   }
+
+
+
 }

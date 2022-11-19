@@ -1,1 +1,35 @@
-<p>film works!</p>
+
+<h1>{{film.title}}</h1>
+<h2>{{film.episode_id}}</h2>
+<p>{{film.opening_crawl}}</p>
+<h4>Charaters</h4>
+<div *ngFor = "let item of film.characters">
+<ul>
+  <li>{{item.characters}}</li>
+</ul>
+</div>
+<h4>Planets</h4>
+<div *ngFor = "let item of film.planets">
+<ul>
+  <li>{{item.planets}}</li>
+</ul>
+</div>
+<h4>Starships</h4>
+<div *ngFor = "let item of film.starships">
+<ul>
+  <li>{{item.starships}}</li>
+</ul>
+</div>
+<h4>Vehicles</h4>
+<div *ngFor = "let item of film.vehicles">
+<ul>
+  <li>{{item.vehicles}}</li>
+</ul>
+</div>
+
+<h4>Species</h4>
+<div *ngFor = "let item of film.species">
+<ul>
+  <li>{{item.species}}</li>
+</ul>
+</div>

@@ -19,32 +19,26 @@ const routes: Routes = [
   {
     path:'', component: HomeComponent
   },{
-    path:'films', component: FilmsComponent,children:[
-      {path:'films/:id', component: FilmComponent}
-    ]
-  },{
-    path:'people', component: PeopleComponent,children:[
+    path:'films', component: FilmsComponent, children:[ {path:':id', component: FilmComponent}],
+  }
+
+  ,{
+    path:'people', component: PeopleComponent},
       {path:'people/:id', component: PersonComponent}
-    ]
-  },{
-    path:'planets', component: PlanetsComponent,children:[
+   ,{
+    path:'planets', component: PlanetsComponent},
       {path:'planets/:id', component: PlanetComponent}
-    ]
-  },
+    ,
   {
-    path:'species', component: SpeciesComponent,children:[
+    path:'species', component: SpeciesComponent},
       {path:'species/:id', component: SpecieComponent}
-    ]
-  },{
-    path:'vehicles', component: VehiclesComponent,children:[
+   ,{
+    path:'vehicles', component: VehiclesComponent},
       {path:'vehicles/:id', component: VehicleComponent}
-    ]
-  },{
-    path:'starships', component: StarshipsComponent,children:[
+   ,{
+    path:'starships', component: StarshipsComponent},
       {path:'starships/:id', component: StarshipComponent}
-    ]
-  },
-];
+   ]
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

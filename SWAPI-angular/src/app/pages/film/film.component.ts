@@ -10,12 +10,18 @@ import { SwapiService } from 'src/app/services/swapi.service';
 export class FilmComponent implements OnInit {
 film: any
 
+
   constructor(private swapiService : SwapiService) { }
 
   ngOnInit(): void {
     this.swapiService.getFilm().subscribe((data:any) => {
       this.film = data
-    })
+
+
+    });
+
+
+
   }
 
 }
