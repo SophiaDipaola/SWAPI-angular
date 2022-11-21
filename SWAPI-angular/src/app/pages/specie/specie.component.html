@@ -1,32 +1,38 @@
-<h1>{{ specie.name }}</h1>
-<ul>
-  <li>classification: {{ specie.classification}}</li>
-  <li>designation: {{ specie.designation}}</li>
-  <li>skin colors: {{ specie.skin_colors }}</li>
-  <li>hair colors: {{ specie.hair_colors }}</li>
-  <li>eye colors: {{ specie.eye_colors }}</li>
-  <li>average lifespan: {{ specie.average_lifespan }}</li>
-  <li>language: {{ specie.language }}</li>
-</ul>
-<h4>People</h4>
-<div>
-  <ul *ngFor="let person of this.people">
-    <li>
-      <span *ngIf="person | async as person; else loadingPersonInfo">
-        {{ person?.name }}
-      </span>
-      <ng-template #loadingPersonInfo> Loading people... </ng-template>
-    </li>
-  </ul>
-</div>
-<h4>Films</h4>
-<div>
-  <ul *ngFor="let film of this.films">
-    <li>
-      <span *ngIf="film | async as film; else loadingFilmInfo">
-        {{ film?.title }}
-      </span>
-      <ng-template #loadingFilmInfo> Loading films... </ng-template>
-    </li>
-  </ul>
+<div class="specie">
+  <div class="info">
+    <h1>{{ specie.name }}</h1>
+    <ul>
+      <li>classification: {{ specie.classification }}</li>
+      <li>designation: {{ specie.designation }}</li>
+      <li>skin colors: {{ specie.skin_colors }}</li>
+      <li>hair colors: {{ specie.hair_colors }}</li>
+      <li>eye colors: {{ specie.eye_colors }}</li>
+      <li>average lifespan: {{ specie.average_lifespan }}</li>
+      <li>language: {{ specie.language }}</li>
+    </ul>
+  </div>
+  <div class="specs">
+    <div>
+      <h4>People</h4>
+      <ul *ngFor="let person of this.people">
+        <li>
+          <span *ngIf="person | async as person; else loadingPersonInfo">
+            {{ person?.name }}
+          </span>
+          <ng-template #loadingPersonInfo> Loading people... </ng-template>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <h4>Films</h4>
+      <ul *ngFor="let film of this.films">
+        <li>
+          <span *ngIf="film | async as film; else loadingFilmInfo">
+            {{ film?.title }}
+          </span>
+          <ng-template #loadingFilmInfo> Loading films... </ng-template>
+        </li>
+      </ul>
+    </div>
+  </div>
 </div>

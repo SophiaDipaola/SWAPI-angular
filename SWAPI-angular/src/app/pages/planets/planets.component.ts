@@ -4,16 +4,16 @@ import { SwapiService } from 'src/app/services/swapi.service';
 @Component({
   selector: 'app-planets',
   templateUrl: './planets.component.html',
-  styleUrls: ['./planets.component.scss']
+  styleUrls: ['./planets.component.scss'],
 })
 export class PlanetsComponent implements OnInit {
-  planets: any
+  planets: any;
 
-  constructor(private swapiService : SwapiService) { }
+  constructor(private swapiService: SwapiService) {}
 
   ngOnInit(): void {
-    this.swapiService.getPlanets().subscribe((data:any) => {
-      this.planets = data
-    })
+    this.swapiService.getPlanets().subscribe((data: any) => {
+      this.planets = data;
+    });
   }
 }

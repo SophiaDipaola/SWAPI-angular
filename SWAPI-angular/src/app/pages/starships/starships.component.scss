@@ -1,24 +1,23 @@
-.starships{
+.starships {
   background-image: url("https://i.imgur.com/EWx0zdh.png");
-   background-position: center;
-   background-repeat: no-repeat;
-   height:150vh;
-   background-size: cover;
-
-   h1{
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 150vh;
+  background-size: cover;
+  h1 {
     font-size: 50px;
     padding-top: 70px;
     margin-left: 50px;
-    color:black;
-   }
-   a{
-    margin:10px;
+    color: black;
+  }
+  a {
+    margin: 10px;
     text-decoration: none;
     color: black;
     font-size: 25px;
-   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   }
-  a:hover{
+  a:hover {
     color: white;
   }
-  }
+}

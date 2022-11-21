@@ -10,37 +10,37 @@ export class SwapiService {
   getPeople() {
     return this.http.get('https://swapi.dev/api/people/');
   }
-  getPerson(id:number) {
+  getPerson(id: number) {
     return this.http.get(`https://swapi.dev/api/people/${id}/`);
   }
   getPlanets() {
     return this.http.get('https://swapi.dev/api/planets/');
   }
-  getPlanet(id:number) {
+  getPlanet(id: number) {
     return this.http.get(`https://swapi.dev/api/planets/${id}/`);
   }
   getFilms() {
     return this.http.get('https://swapi.dev/api/films/');
   }
-  getFilm(id:number) {
+  getFilm(id: number) {
     return this.http.get(`https://swapi.dev/api/films/${id}/`);
   }
   getSpecies() {
     return this.http.get('https://swapi.dev/api/species/');
   }
-  getSpecie(id:number) {
+  getSpecie(id: number) {
     return this.http.get(`https://swapi.dev/api/species/${id}/`);
   }
   getStarships() {
     return this.http.get('https://swapi.dev/api/starships/');
   }
-  getStarship(id:number) {
+  getStarship(id: number) {
     return this.http.get(`https://swapi.dev/api/starships/${id}/`);
   }
   getVehicles() {
     return this.http.get('https://swapi.dev/api/vehicles/');
   }
-  getVehicle(id:number) {
+  getVehicle(id: number) {
     return this.http.get(`https://swapi.dev/api/vehicles/${id}/`);
   }
   getCharacters(url: string) {

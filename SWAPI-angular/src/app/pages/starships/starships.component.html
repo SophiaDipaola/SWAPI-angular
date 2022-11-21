@@ -1,9 +1,9 @@
 <div class="starships">
   <app-navigation></app-navigation>
-<h1>Starships</h1>
-<div *ngFor="let starship of starships.results; let i = index">
-  <ul>
-    <a routerLink="{{i+1}}" >{{starship.name}}</a>
-  </ul>
+  <h1>Starships</h1>
+  <div *ngFor="let starship of starships.results; let i = index">
+    <ul>
+      <a routerLink="{{ i + 1 }}">{{ starship.name }}</a>
+    </ul>
   </div>
 </div>

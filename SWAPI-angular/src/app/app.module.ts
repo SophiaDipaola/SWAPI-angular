@@ -1,9 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {BrowserAnimationsModule }  from '@angular/platform-browser/animations';
-import { MatCardModule } from '@angular/material/card';
-import { MatListModule } from '@angular/material/list';
-import {MatIconModule} from '@angular/material/icon';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,7 +10,6 @@ import { StarshipsComponent } from './pages/starships/starships.component';
 import { StarshipComponent } from './pages/starship/starship.component';
 import { FilmComponent } from './pages/film/film.component';
 import { FilmsComponent } from './pages/films/films.component';
-
 import { HomeComponent } from './pages/home/home.component';
 import { PeopleComponent } from './pages/people/people.component';
 import { PersonComponent } from './pages/person/person.component';
@@ -23,9 +20,6 @@ import { SpeciesComponent } from './pages/species/species.component';
 import { VehicleComponent } from './pages/vehicle/vehicle.component';
 import { VehiclesComponent } from './pages/vehicles/vehicles.component';
 import { NavigationComponent } from './navigation/navigation.component';
-
-
-
 
 @NgModule({
   declarations: [
@@ -43,20 +37,15 @@ import { NavigationComponent } from './navigation/navigation.component';
     SpeciesComponent,
     VehicleComponent,
     VehiclesComponent,
-    NavigationComponent
-
+    NavigationComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatIconModule,
-    MatListModule,
-    MatCardModule
-
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

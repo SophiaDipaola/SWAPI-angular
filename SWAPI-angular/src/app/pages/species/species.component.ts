@@ -4,16 +4,16 @@ import { SwapiService } from 'src/app/services/swapi.service';
 @Component({
   selector: 'app-species',
   templateUrl: './species.component.html',
-  styleUrls: ['./species.component.scss']
+  styleUrls: ['./species.component.scss'],
 })
 export class SpeciesComponent implements OnInit {
-  species: any
+  species: any;
 
-  constructor(private swapiService : SwapiService) { }
+  constructor(private swapiService: SwapiService) {}
 
   ngOnInit(): void {
-    this.swapiService.getSpecies().subscribe((data:any) => {
-      this.species = data
-    })
+    this.swapiService.getSpecies().subscribe((data: any) => {
+      this.species = data;
+    });
   }
 }

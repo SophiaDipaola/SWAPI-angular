@@ -1,21 +1,25 @@
-<h1>{{ vehicle.name }}</h1>
-<ul>
-  <li>model: {{ vehicle.model}}</li>
-  <li>manufacturer: {{ vehicle.manufacturer}}</li>
-  <li>cost in credits: {{ vehicle.cost_in_credits}}</li>
-  <li>length: {{ vehicle.length }}</li>
-  <li>max speed: {{ vehicle.max_atmosphering_speed }}</li>
-  <li>passengers: {{ vehicle.passengers }}</li>
-  <li>vehicle class: {{ vehicle.vehicle_class }}</li>
-</ul>
-<h4>Films</h4>
-<div>
-  <ul *ngFor="let film of this.films">
-    <li>
-      <span *ngIf="film | async as film; else loadingFilmInfo">
-        {{ film?.title }}
-      </span>
-      <ng-template #loadingFilmInfo> Loading films... </ng-template>
-    </li>
-  </ul>
+<div class="vehicle">
+  <div class="info">
+    <h1>{{ vehicle.name }}</h1>
+    <ul>
+      <li>model: {{ vehicle.model }}</li>
+      <li>manufacturer: {{ vehicle.manufacturer }}</li>
+      <li>cost in credits: {{ vehicle.cost_in_credits }}</li>
+      <li>length: {{ vehicle.length }}</li>
+      <li>max speed: {{ vehicle.max_atmosphering_speed }}</li>
+      <li>passengers: {{ vehicle.passengers }}</li>
+      <li>vehicle class: {{ vehicle.vehicle_class }}</li>
+    </ul>
+  </div>
+  <div>
+    <h4>Films</h4>
+    <ul *ngFor="let film of this.films">
+      <li>
+        <span *ngIf="film | async as film; else loadingFilmInfo">
+          {{ film?.title }}
+        </span>
+        <ng-template #loadingFilmInfo> Loading films... </ng-template>
+      </li>
+    </ul>
+  </div>
 </div>

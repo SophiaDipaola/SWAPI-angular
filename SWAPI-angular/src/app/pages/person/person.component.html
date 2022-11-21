@@ -1,42 +1,47 @@
-
-<h1>{{ person.name }}</h1>
-<ul>
-  <li>gender: {{ person.gender }}</li>
-  <li>hair color: {{ person.hair_color }}</li>
-  <li>eye color: {{ person.eye_color }}</li>
-  <li>birth year: {{ person.birth_year }}</li>
-  <li>height: {{ person.height }}</li>
-</ul>
-<h4>Starships</h4>
-<div>
-  <ul *ngFor="let starship of this.starships">
-    <li>
-      <span *ngIf="starship | async as starship; else loadingStarshipInfo">
-        {{ starship?.name }}
-      </span>
-      <ng-template #loadingStarshipInfo> Loading starships... </ng-template>
-    </li>
-  </ul>
-</div>
-<h4>Vehicles</h4>
-<div>
-  <ul *ngFor="let vehicle of this.vehicles">
-    <li>
-      <span *ngIf="vehicle | async as vehicle; else loadingVehicleInfo">
-        {{ vehicle?.name }}
-      </span>
-      <ng-template #loadingVehicleInfo> Loading vehicles... </ng-template>
-    </li>
-  </ul>
-</div>
-<h4>Films</h4>
-<div>
-  <ul *ngFor="let film of this.films">
-    <li>
-      <span *ngIf="film | async as film; else loadingFilmInfo">
-        {{ film?.title }}
-      </span>
-      <ng-template #loadingFilmInfo> Loading films... </ng-template>
-    </li>
-  </ul>
+<div class="character">
+  <div class="info">
+    <h1>{{ person.name }}</h1>
+    <ul>
+      <li>gender: {{ person.gender }}</li>
+      <li>hair color: {{ person.hair_color }}</li>
+      <li>eye color: {{ person.eye_color }}</li>
+      <li>birth year: {{ person.birth_year }}</li>
+      <li>height: {{ person.height }}</li>
+    </ul>
+  </div>
+  <div class="specs">
+    <div>
+      <h4>Starships</h4>
+      <ul *ngFor="let starship of this.starships">
+        <li>
+          <span *ngIf="starship | async as starship; else loadingStarshipInfo">
+            {{ starship?.name }}
+          </span>
+          <ng-template #loadingStarshipInfo> Loading starships... </ng-template>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <h4>Vehicles</h4>
+      <ul *ngFor="let vehicle of this.vehicles">
+        <li>
+          <span *ngIf="vehicle | async as vehicle; else loadingVehicleInfo">
+            {{ vehicle?.name }}
+          </span>
+          <ng-template #loadingVehicleInfo> Loading vehicles... </ng-template>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <h4>Films</h4>
+      <ul *ngFor="let film of this.films">
+        <li>
+          <span *ngIf="film | async as film; else loadingFilmInfo">
+            {{ film?.title }}
+          </span>
+          <ng-template #loadingFilmInfo> Loading films... </ng-template>
+        </li>
+      </ul>
+    </div>
+  </div>
 </div>

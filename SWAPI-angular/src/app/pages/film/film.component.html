@@ -1,61 +1,72 @@
-<h1>{{ film.title }}</h1>
-<h3>Directed by: {{film.director}}</h3>
-<h4>Release Date: {{film.release_date}}</h4>
-<h2>Episode {{ film.episode_id }}</h2>
-<p>{{ film.opening_crawl }}</p>
-<h4>Charaters</h4>
-<div>
-  <ul *ngFor="let character of this.characters">
-    <li>
-      <span *ngIf="character | async as character; else loadingCharacterInfo">
-        {{ character?.name }}
-      </span>
-      <ng-template #loadingCharacterInfo> Loading characters... </ng-template>
-    </li>
-  </ul>
-</div>
-<h4>Planets</h4>
-<div>
-  <ul *ngFor="let planet of this.planets">
-    <li>
-      <span *ngIf="planet | async as planet; else loadingPlanetInfo">
-        {{ planet?.name }}
-      </span>
-      <ng-template #loadingPlanetInfo> Loading planets... </ng-template>
-    </li>
-  </ul>
-</div>
-<h4>Starships</h4>
-<div>
-  <ul *ngFor="let starship of this.starships">
-    <li>
-      <span *ngIf="starship | async as starship; else loadingStarshipInfo">
-        {{ starship?.name }}
-      </span>
-      <ng-template #loadingStarshipInfo> Loading starships... </ng-template>
-    </li>
-  </ul>
-</div>
-<h4>Vehicles</h4>
-<div>
-  <ul *ngFor="let vehicle of this.vehicles">
-    <li>
-      <span *ngIf="vehicle | async as vehicle; else loadingVehicleInfo">
-        {{ vehicle?.name }}
-      </span>
-      <ng-template #loadingVehicleInfo> Loading vehicles... </ng-template>
-    </li>
-  </ul>
-</div>
-
-<h4>Species</h4>
-<div>
-  <ul *ngFor="let specie of this.species">
-    <li>
-      <span *ngIf="specie | async as specie; else loadingSpecieInfo">
-        {{ specie?.name }}
-      </span>
-      <ng-template #loadingSpecieInfo> Loading species... </ng-template>
-    </li>
-  </ul>
+<div class="film">
+  <div class="film-info">
+    <h1>{{ film.title }}</h1>
+    <p>
+      Directed by: {{ film.director }}<br />
+      Release Date: {{ film.release_date }}<br />
+      Episode {{ film.episode_id }}
+    </p>
+    <p class="opening-crawl">{{ film.opening_crawl }}</p>
+  </div>
+  <div class="specs">
+    <div>
+      <h4>Charaters</h4>
+      <ul *ngFor="let character of this.characters">
+        <li>
+          <span
+            *ngIf="character | async as character; else loadingCharacterInfo"
+          >
+            {{ character?.name }}
+          </span>
+          <ng-template #loadingCharacterInfo>
+            Loading characters...
+          </ng-template>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <h4>Planets</h4>
+      <ul *ngFor="let planet of this.planets">
+        <li>
+          <span *ngIf="planet | async as planet; else loadingPlanetInfo">
+            {{ planet?.name }}
+          </span>
+          <ng-template #loadingPlanetInfo> Loading planets... </ng-template>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <h4>Starships</h4>
+      <ul *ngFor="let starship of this.starships">
+        <li>
+          <span *ngIf="starship | async as starship; else loadingStarshipInfo">
+            {{ starship?.name }}
+          </span>
+          <ng-template #loadingStarshipInfo> Loading starships... </ng-template>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <h4>Vehicles</h4>
+      <ul *ngFor="let vehicle of this.vehicles">
+        <li>
+          <span *ngIf="vehicle | async as vehicle; else loadingVehicleInfo">
+            {{ vehicle?.name }}
+          </span>
+          <ng-template #loadingVehicleInfo> Loading vehicles... </ng-template>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <h4>Species</h4>
+      <ul *ngFor="let specie of this.species">
+        <li>
+          <span *ngIf="specie | async as specie; else loadingSpecieInfo">
+            {{ specie?.name }}
+          </span>
+          <ng-template #loadingSpecieInfo> Loading species... </ng-template>
+        </li>
+      </ul>
+    </div>
+  </div>
 </div>
