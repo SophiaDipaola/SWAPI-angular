@@ -1,7 +1,6 @@
-<p>planets works!</p>
-
-<div *ngFor="let item of planets.results">
+<h1>Planets</h1>
+<div *ngFor="let planet of planets.results; let i = index">
   <ul>
-    <li>{{item.name}}</li>
+    <a routerLink="{{i+1}}" >{{planet.name}}</a>
   </ul>
   </div>

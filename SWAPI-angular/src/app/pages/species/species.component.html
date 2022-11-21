@@ -1,8 +1,6 @@
-<p>species works!</p>
-
-
-<div *ngFor="let item of species.results">
+<h1>Species</h1>
+<div *ngFor="let specie of species.results; let i = index">
   <ul>
-    <li>{{item.name}}</li>
+    <a routerLink="{{i+1}}" >{{specie.name}}</a>
   </ul>
   </div>

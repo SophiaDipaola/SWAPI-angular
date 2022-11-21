@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {BrowserAnimationsModule }  from '@angular/platform-browser/animations';
-// import { MaterialModule } from './material.module';
 import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
 import {MatIconModule} from '@angular/material/icon';
@@ -50,9 +49,8 @@ import { VehiclesComponent } from './pages/vehicles/vehicles.component';
     HttpClientModule,
     BrowserAnimationsModule,
     MatIconModule,
-    // MaterialModule,
     MatListModule,
-     MatCardModule
+    MatCardModule
 
   ],
   providers: [],

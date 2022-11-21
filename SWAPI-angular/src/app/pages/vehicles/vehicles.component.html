@@ -1,8 +1,6 @@
-<p>vehicles works!</p>
-
-
-<div *ngFor="let item of vehicles.results">
+<h1>Vehicles</h1>
+<div *ngFor="let vehicle of vehicles.results; let i = index">
   <ul>
-    <li>{{item.name}}</li>
+    <a routerLink="{{i+1}}" >{{vehicle.name}}</a>
   </ul>
   </div>

@@ -1,7 +1,6 @@
 <p>people works!</p>
-
-<div *ngFor="let item of people.results">
-<ul>
-  <li>{{item.name}}</li>
-</ul>
-</div>
+<div *ngFor="let item of people.results; let i = index">
+  <ul>
+    <a routerLink="{{i+1}}" >{{item.name}}</a>
+  </ul>
+  </div>

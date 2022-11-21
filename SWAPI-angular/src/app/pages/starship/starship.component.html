@@ -1,1 +1,22 @@
-<p>starship works!</p>
+<h1>{{ starship.name }}</h1>
+<ul>
+  <li>model: {{ starship.model}}</li>
+  <li>manufacturer: {{ starship.manufacturer}}</li>
+  <li>cost in credits: {{ starship.cost_in_credits}}</li>
+  <li>length: {{ starship.length }}</li>
+  <li>max speed: {{ starship.max_atmosphering_speed }}</li>
+  <li>passengers: {{ starship.passengers }}</li>
+  <li>starship class: {{ starship.starship_class }}</li>
+</ul>
+<h4>Films</h4>
+<div>
+  <ul *ngFor="let film of this.films">
+    <li>
+      <span *ngIf="film | async as film; else loadingFilmInfo">
+        {{ film?.title }}
+      </span>
+      <ng-template #loadingFilmInfo> Loading films... </ng-template>
+    </li>
+  </ul>
+</div>
+

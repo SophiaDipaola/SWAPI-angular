@@ -1,6 +1,6 @@
 <p>films works!</p>
-<div *ngFor="let item of films.results">
+<div *ngFor="let film of films.results; let i = index">
   <ul>
-    <a routerLink="/films/:id">{{item.title}}</a>
+    <a routerLink="{{i+1}}" >{{film.title}}</a>
   </ul>
   </div>

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SwapiService } from 'src/app/services/swapi.service';
-import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-films',

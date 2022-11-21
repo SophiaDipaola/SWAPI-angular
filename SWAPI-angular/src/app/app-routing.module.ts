@@ -17,31 +17,41 @@ import { StarshipComponent } from './pages/starship/starship.component';
 
 const routes: Routes = [
   {
-    path:'', component: HomeComponent
-  },{
-    path:'films', component: FilmsComponent, children:[ {path:':id', component: FilmComponent}],
-  }
-
-  ,{
-    path:'people', component: PeopleComponent},
-      {path:'people/:id', component: PersonComponent}
-   ,{
-    path:'planets', component: PlanetsComponent},
-      {path:'planets/:id', component: PlanetComponent}
-    ,
+    path: '',
+    component: HomeComponent,
+  },
   {
-    path:'species', component: SpeciesComponent},
-      {path:'species/:id', component: SpecieComponent}
-   ,{
-    path:'vehicles', component: VehiclesComponent},
-      {path:'vehicles/:id', component: VehicleComponent}
-   ,{
-    path:'starships', component: StarshipsComponent},
-      {path:'starships/:id', component: StarshipComponent}
-   ]
+    path: 'films',
+    component: FilmsComponent,
+  },
+  { path: 'films/:id', component: FilmComponent },
+
+  { path: 'people', component: PeopleComponent },
+  { path: 'people/:id', component: PersonComponent },
+  {
+    path: 'planets',
+    component: PlanetsComponent,
+  },
+  { path: 'planets/:id', component: PlanetComponent },
+  {
+    path: 'species',
+    component: SpeciesComponent,
+  },
+  { path: 'species/:id', component: SpecieComponent },
+  {
+    path: 'vehicles',
+    component: VehiclesComponent,
+  },
+  { path: 'vehicles/:id', component: VehicleComponent },
+  {
+    path: 'starships',
+    component: StarshipsComponent,
+  },
+  { path: 'starships/:id', component: StarshipComponent },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
