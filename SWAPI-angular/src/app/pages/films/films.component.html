@@ -1,6 +1,9 @@
-<p>films works!</p>
+<div class="films">
+<app-navigation></app-navigation>
+<h1>Films</h1>
 <div *ngFor="let film of films.results; let i = index">
   <ul>
     <a routerLink="{{i+1}}" >{{film.title}}</a>
   </ul>
   </div>
+</div>

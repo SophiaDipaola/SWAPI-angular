@@ -1,6 +1,9 @@
+<div class="planets">
+  <app-navigation></app-navigation>
 <h1>Planets</h1>
 <div *ngFor="let planet of planets.results; let i = index">
   <ul>
     <a routerLink="{{i+1}}" >{{planet.name}}</a>
   </ul>
   </div>
+</div>

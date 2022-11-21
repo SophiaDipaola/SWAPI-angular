@@ -22,6 +22,7 @@ import { SpecieComponent } from './pages/specie/specie.component';
 import { SpeciesComponent } from './pages/species/species.component';
 import { VehicleComponent } from './pages/vehicle/vehicle.component';
 import { VehiclesComponent } from './pages/vehicles/vehicles.component';
+import { NavigationComponent } from './navigation/navigation.component';
 
 
 
@@ -41,7 +42,9 @@ import { VehiclesComponent } from './pages/vehicles/vehicles.component';
     SpecieComponent,
     SpeciesComponent,
     VehicleComponent,
-    VehiclesComponent
+    VehiclesComponent,
+    NavigationComponent
+
   ],
   imports: [
     BrowserModule,

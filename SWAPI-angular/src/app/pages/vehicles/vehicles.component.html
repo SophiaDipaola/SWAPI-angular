@@ -1,6 +1,9 @@
+<div class="vehicles">
+  <app-navigation></app-navigation>
 <h1>Vehicles</h1>
 <div *ngFor="let vehicle of vehicles.results; let i = index">
   <ul>
     <a routerLink="{{i+1}}" >{{vehicle.name}}</a>
   </ul>
   </div>
+</div>

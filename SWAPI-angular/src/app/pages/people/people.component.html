@@ -1,6 +1,9 @@
-<p>people works!</p>
+<div class="characters">
+  <app-navigation></app-navigation>
+<h1>Characters</h1>
 <div *ngFor="let item of people.results; let i = index">
   <ul>
     <a routerLink="{{i+1}}" >{{item.name}}</a>
   </ul>
   </div>
+</div>
